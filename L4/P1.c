@@ -1,3 +1,5 @@
+//1. Sa se scrie un program care calculeaza suma elementelor unui
+//  vector folosindu-ne doar de variabile de tip pointer.
 #include <stdio.h>
 #include <stdlib.h>
 
