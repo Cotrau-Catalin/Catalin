@@ -1,4 +1,6 @@
-  
+//6. Sa se realizeze un program care realizeaza suma a doua
+//  numerelor intr-o metoda separate de metoda main, iar aceea
+//  metoda returneaza un pointer.
 #include <stdio.h>
 #include <stdlib.h>
 
