@@ -5,15 +5,6 @@
 #include <stdlib.h>
 #define SIZE 60
 int stac1[SIZE], stac2[SIZE], t1=-1, t2=-1;
-void pus1(int nr)
-{
-	if (t1 == SIZE - 1)
-	{
-		printf("\nStiva este plina\n ");
-		return;
-	}
-	stac1[++t1] = nr;
-}
 void po1()
 {
 	if (t1 == -1)
@@ -22,15 +13,6 @@ void po1()
 		return;
 	}
 	t1--;
-}
-void pus2(int nr)
-{
-	if (t2 == SIZE - 1)
-	{
-		printf("\nStiva este plina\n ");
-		return;
-	}
-	stac2[++t2] = nr;
 }
 void po2()
 {
@@ -41,6 +23,35 @@ void po2()
 	}
 	t2--;
 }
+void pus1(int nr)
+{
+	if (t1 == SIZE - 1)
+	{
+		printf("\nStiva este plina\n ");
+		return;
+	}
+	stac1[++t1] = nr;
+}
+void pus2(int nr)
+{
+	if (t2 == SIZE - 1)
+	{
+		printf("\nStiva este plina\n ");
+		return;
+	}
+	stac2[++t2] = nr;
+}
+int prim(int nr)
+{
+	int i;
+	if (nr == 1)
+		return 0;
+	for (i = 2; i <= nr/2; i++)
+		if (nr%i == 0)
+			return 0;
+	return 1;
+}
+
 int binar(int nr)
 {
 	int k = 0, binary[10],i,baze2=0;
@@ -55,16 +66,6 @@ int binar(int nr)
 	return baza\e2;
 }
 
-int prim(int nr)
-{
-	int i;
-	if (nr == 1)
-		return 0;
-	for (i = 2; i <= nr/2; i++)
-		if (nr%i == 0)
-			return 0;
-	return 1;
-}
 int main()
 {
 	int i,aux[50],k=0;
