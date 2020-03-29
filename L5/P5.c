@@ -3,7 +3,7 @@
 //adauga într-o a doua stiva sub forma binara.
 #include <stdio.h>
 #include <stdlib.h>
-#define SIZE 50
+#define SIZE 60
 int stac1[SIZE], stac2[SIZE], t1=-1, t2=-1;
 void pus1(int nr)
 {
