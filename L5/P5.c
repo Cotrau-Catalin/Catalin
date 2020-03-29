@@ -4,8 +4,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #define SIZE 50
-int stack1[SIZE], stack2[SIZE], t1=-1, t2=-1;
-void push1(int nr)
+int stac1[SIZE], stac2[SIZE], t1=-1, t2=-1;
+void pus1(int nr)
 {
 	if (t1 == SIZE - 1)
 	{
