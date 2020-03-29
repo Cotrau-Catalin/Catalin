@@ -9,7 +9,7 @@ void pus1(int nr)
 {
 	if (t1 == SIZE - 1)
 	{
-		printf("\nEroare:Stiva este plina\n ");
+		printf("\nStiva este plina\n ");
 		return;
 	}
 	stac1[++t1] = nr;
@@ -18,7 +18,7 @@ void po1()
 {
 	if (t1 == -1)
 	{
-		printf("\nEroare:stiva este goala\n");
+		printf("\nStiva este goala\n");
 		return;
 	}
 	t1--;
@@ -27,7 +27,7 @@ void pus2(int nr)
 {
 	if (t2 == SIZE - 1)
 	{
-		printf("\nEroare:Stiva este plina\n ");
+		printf("\nStiva este plina\n ");
 		return;
 	}
 	stac2[++t2] = nr;
@@ -36,7 +36,7 @@ void po2()
 {
 	if (t2 == -1)
 	{
-		printf("\nEroare:stiva este goala\n");
+		printf("\nStiva este goala\n");
 		return;
 	}
 	t2--;
