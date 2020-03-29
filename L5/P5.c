@@ -63,7 +63,7 @@ int binar(int nr)
 	}
 	for (i = k - 1; i >= 0; i--)
 		baze2 = baze2 * 10 + binary[i];
-	return baza\e2;
+	return baze2;
 }
 
 int main()
