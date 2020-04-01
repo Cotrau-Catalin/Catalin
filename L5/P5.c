@@ -3,8 +3,8 @@
 //adauga într-o a doua stiva sub forma binara.
 #include <stdio.h>
 #include <stdlib.h>
-#define SIZE 50
-int stac1[SIZE], stac2[SIZE], t1=-1, t2=-1;
+#define M 50
+int stac1[M], stac2[M], t1 = -1, t2 = -1;
 void po1()
 {
 	if (t1 == -1)
@@ -25,7 +25,7 @@ void po2()
 }
 void pus1(int nr)
 {
-	if (t1 == SIZE - 1)
+	if (t1 == M - 1)
 	{
 		printf("\nStiva este plina\n ");
 		return;
@@ -34,7 +34,7 @@ void pus1(int nr)
 }
 void pus2(int nr)
 {
-	if (t2 == SIZE - 1)
+	if (t2 == M - 1)
 	{
 		printf("\nStiva este plina\n ");
 		return;
@@ -46,30 +46,30 @@ int prim(int nr)
 	int i;
 	if (nr == 1)
 		return 0;
-	for (i = 2; i <= nr/2; i++)
-		if (nr%i == 0)
+	for (i = 2; i <= nr / 2; i++)
+		if (nr % i == 0)
 			return 0;
 	return 1;
 }
 
 int binar(int nr)
 {
-	int k = 0, binary[10],i,baze2=0;
+	int i, p = 0, baze2 = 0, binar[6];
 	while (nr > 0)
 	{
-		binary[k] = nr % 2;
+		binar[p] = nr % 2;
 		nr = nr / 2;
-		k++;
+		p++;
 	}
-	for (i = k - 1; i >= 0; i--)
-		baze2 = baze2 * 10 + binary[i];
+	for (i = p - 1; i >= 0; i--)
+		baze2 = baze2 * 10 + binar[i];
 	return baze2;
 }
 
 int main()
 {
-	int i,aux[50],k=0;
-	for (i = 1; i <= 50; i++)
+	int i, aux[M], k = 0;
+	for (i = 1; i <= M; i++)
 		pus1(i);
 	while (t1 != -1)
 	{
